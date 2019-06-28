@@ -26,3 +26,11 @@ Solution:
     (Taken from https://mijingo.com/blog/search-git-commits-with-grep)
     I think this works because it incorporates log as the first option.
     Then, the grep parameter (?) does the searching.
+
+Task 8
+------
+The differences between uncommitted edits and the last commit are revealed by:
+    git diff readme.txt
+More generally, the command is:
+    git diff <file>
+    (Taken from http://gitready.com/intermediate/2009/01/30/finding-what-has-been-changed.html)
