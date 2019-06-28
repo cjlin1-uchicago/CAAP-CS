@@ -2,4 +2,3 @@ Task 6
 ------
 Taken from https://help.github.com/en/articles/changing-a-commit-message
 To edit an unpushed commit message, do **git commit --amend**
-Note: I bolded text by enclosing it between asterisks
