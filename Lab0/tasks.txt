@@ -2,3 +2,30 @@ Task 6
 ------
 Taken from https://help.github.com/en/articles/changing-a-commit-message
 To edit an unpushed commit message, do **git commit --amend**
+
+Task 7
+------
+The --no-mouse option was likely added Fri Mar 6 18:57:36 2015
+SHA is 07e2bd673e333568e150747a7d65dcacbd9ae1ca
+
+Commit Message:
+Update README
+
+diff --git a/README.md b/README.md
+index e5ada36..c7b79d3 100644
+--- a/README.md
++++ b/README.md
+@@ -14,16 +14,17 @@ Installation
+ fzf project consists of the followings:
+ 
+ -  executable
++-  script for launching fzf in a tmux split
+ - Shell extensions
+     - Key bindings (, , and ) (bash, zsh, fish)
+-    - Fuzzy auto-completion (bash)
++    - Fuzzy auto-completion (bash only)
+ 
+ You can [download fzf executable][bin] alone, but it's recommended that you
+ install the extra stuff using the attached install script.
+
+This task was completed by doing **git log -S no-mouse**, where the -S option searches for the keyword no-mouse and retrieves several commit SHAs. The earliest match was from Mar 6 2015, which suggests the introduction of the option into fzf. Information was displayed using **git show SHA**
