@@ -34,3 +34,15 @@ The differences between uncommitted edits and the last commit are revealed by:
 More generally, the command is:
     git diff <file>
     (Taken from http://gitready.com/intermediate/2009/01/30/finding-what-has-been-changed.html)
+
+Task 9
+------
+First, we will remove mistake.txt from the local repo with:
+    rm mistake.txt
+Doing git status, we see that the following is not staged for commit.
+    deleted:    mistake.txt
+We now need to stage this change with:
+    git rm mistake.txt
+Doing git status, the following will be ready to be committed.
+    deleted:    mistake.txt
+Now, we simply commit the change and push it into Github. :)
