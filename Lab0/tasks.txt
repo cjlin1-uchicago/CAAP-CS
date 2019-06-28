@@ -28,4 +28,7 @@ index e5ada36..c7b79d3 100644
  You can [download fzf executable][bin] alone, but it's recommended that you
  install the extra stuff using the attached install script.
 
-This task was completed by doing **git log -S no-mouse**, where the -S option searches for the keyword no-mouse and retrieves several commit SHAs. The earliest match was from Mar 6 2015, which suggests the introduction of the option into fzf. Information was displayed using **git show SHA**
+This task was completed by doing **git log -S no-mouse**.
+The -S option searches for the keyword no-mouse and retrieves several commit SHAs. 
+The earliest match was from Mar 6 2015, which suggests the introduction of the option into fzf. 
+Information was displayed using **git show SHA**
