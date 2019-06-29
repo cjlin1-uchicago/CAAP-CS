@@ -46,3 +46,28 @@ We now need to stage this change with:
 Doing git status, the following will be ready to be committed.
     deleted:    mistake.txt
 Now, we simply commit the change and push it into Github. :)
+
+Task 10
+-------
+Process:
+    Some searching gave me the following for reverting changes:
+        git revert HEAD~(commit number, where HEAD is the first and latest commit)
+    I made an attempt to revert, but then I came across some issues.
+    I needed to delete the commit of the revert attempt.
+    I decided to start over so I tried deleting the last commit.
+    After some searching, this is how to delete a local commit:
+        git rebase -I HEAD~(number of commits to delete)
+        (Taken from: https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/)
+    Once prompted in Vim, I deleted the commit I didn't want.
+    To apply the changes to GitHub, I needed to do:
+        git push origin +master
+        (Taken from: https://ncona.com/2011/07/how-to-delete-a-commit-in-git-local-and-remote/)
+
+Solution:
+    Do the following:
+        git revert HEAD~(commit number)..HEAD
+        (Taken from: http://serebrov.github.io/html/2014-01-04-git-revert-multiple-recent-comments.html)
+    This will remove the changes in revert from HEAD~n to HEAD.
+    Note that this solution gives one Vim commit message prompt per commit we revert.
+    Not sure if I can combine all the individual revert commits into one single commit to push out, but I will try to look for it. 
+   
