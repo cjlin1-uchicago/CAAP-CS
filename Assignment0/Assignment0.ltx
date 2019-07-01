@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+
+\title{Assignment 0}
+\author{Chenjia Lin}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+	\item %Problem 1
+		Assumption: The extraterrestrial beings both have hands with thumbs that point towards the center of a the line of sight and an index finger.\\
+		First, stretch both arms and hands out, with palm side facing down. Next, observe which hand makes an ``L." The hand that makes a proper L is ``left." The other hand is right. 
+	\item %Problem 2
+		 I suppose that there should be some organized system for how gas is distributed to a gas station. I will probably visit a gas station and ask to look at the records for how the gas was delivered and distributed. If possible, I would also try to get a phone number that connects me to the gas distributor. I would ask the gas distributor for the number of gas stations that they supply their gas to. Although there would be several distributors, the gas suppliers are likely in some oligopoly. Thus, I can probably reach out to other distributors and obtain more information. From each distributor, I would likely obtain the number of gas stations they supply gas to. I would thus add the numbers together to reach a total.
+	\item %Problem 3
+		Observe that all baskets have a label that does not reflect the contents of the basket. First, go to the basket labelled as ``apples and oranges" and retrieve a fruit. Without loss of generality, suppose that we pulled out an orange.\\
+		\indent That means the basket we pulled it out of should be labelled ``oranges." Give that basket the ``oranges" label. We now have two labels left to place on the remaining baskets: ``apples" and ``apples and oranges."\\
+		\indent The basket mislabelled ``apples" cannot have the ``apples" label, and must thus be labelled ``apples and oranges." The basket mislabelled ``oranges" must thus take on the ``apples" label. Now, we have properly labelled the three baskets.
+	\item %Problem 4
+		``I don't think it matters. How you play will depend on how big our table is. We could be working with a square table with a diagonal length exactly equal to the coin's diameter, where we would want to play first. Moreover, if we have a square that can only fit two coins, we would want to play second. Perhaps if you need more space, simply shift the coins that aren't bordering the table to create a lattice of coins where coins are either tangent to four other coins or 6 other coins."
+	\item %PROBLEM 5
+		When we have 13 pirates, we have 3 coins left. When we have 12 pirates, we have 5 coins left. When we have 11 pirates, we have no coins left. Let $C$ be the number of coins. From our given information, we have:
+		\begin{align*}
+			C &\equiv 3 \mod 13\\
+			&\equiv 5 \mod 12\\
+			&\equiv 0 \mod 11\\
+		\end{align*}
+		Using trial and error on the last two congruences, we see that $77 \equiv 0 \mod 11 \equiv 5 \mod 12$. Note that $77$ is the smallest positive solution, and that subsequent solutions to the system is $77 + 12\cdot 11k = 77+132k$, where $k$ is an integer. Moreover, $C \equiv 77 + 132k$.\\
+		
+		Thus, we have $C \equiv 77+132k \equiv 3 \mod 13$. Applying modulo 13 to the LHS, we have $12+2k \equiv 3 \mod 13$. By modular arithmetic operations, we have $9+2k \equiv 0 \mod 13$. We can easily determine that $k=2$ will satisfy the congruence. Since $C \equiv 77 + 132k$ and $k=2$, $C = 77 + 132\cdot 2 = 341$. More generally, additional solutions for $C$ will be in the form $341 + 12\cdot 13 \cdot 11 = 341 + 1716k'$, where $k'$ is an integer. Evidently, the only value of $C$ that is less than 1,000 is $\boxed{341}$. \\
+		
+		Note that my solution does not follow an algorithm, but I suppose that this problem could be solved on a computer also by trial and error. But before solving a system, we should check that we have solutions with the Chinese Remainder Theorem, which requires all pairwise modulo be coprime.
+	\item %Problem 6
+		From my own experience, computer science is very useful for solving math problems that may appear to be tedious, particularly on some math competitions. Most of my programs involved using for loops and if statements to determine certain desirable values given a set of restrictions. \\
+		\indent Aside from math problems, I am aware that computer science is necessary in data analysis and organizing the large amount of data generated. Computer science appears to more prominent in physics, chemistry, and biology today, as it allows us to create models that predict phenomena.
+		
+	\item %Problem 7
+		I think that ``good code" should not only be understood by the creator him/herself, but also any collaborators they may have. Perhaps some characteristics include organization of code and the inclusion of notes in the form of voided text to explain what is going on. 
+	\item %Problem 8
+		In seventh grade, I learned a bit of Python 2 but forgot it. However, since then, I learned to do some basic programming on my TI-84 calculator. I used programs to solve difficult math problems and to generalize some solutions. Over time, I also started to learn how to use \LaTeX \space and the tikz package for drawing geometric diagrams. 
+	
+\end{enumerate}
+
+\end{document}
