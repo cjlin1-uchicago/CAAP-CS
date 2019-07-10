@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+/* ================================ */
+/* HEADER SETTINGS */
+/* ================================ */
+header {
+  font-family: "Lucida Grande";
+}
+
+
+
+/* ================================ */
+/* NAVIGATION BAR SETTINGS */
+/* ================================ */
+ul#nav {
+  background-color: #2ecc71;
+  padding-top: 0.25cm;
+  padding-bottom: 0.25cm;
+  font-family: "Lucida Grande";
+  margin-left: 1px;
+}
+
+li#nav_item {
+  display:inline-block;
+  float:none;
+  font-family: "Lucida Grande";
+}
+
+/*
+The nav and nav_item ids are used to specifically modify the lists
+of the navigation bar
+*/
+
+li a {
+  display:block;
+  padding: 0.25cm;
+  background-color: #f4f610;
+  border-color: #e7d413;
+  font-family: "Lucida Grande";
+}
+
+ul {
+  margin-left: 3cm;
+}
+
+/* ================================ */
+/* HEADINGS SETTINGS */
+/* ================================ */
+h1 {
+  font-family: "Lucida Grande";
+  font-style: italic;
+}
+
+h2 {
+  margin-left: 2cm;
+  margin-right: 3cm;
+  border-bottom-style: inset;
+  border-color: #f6e478
+}
+
+h3 {
+  margin-left: 3cm;
+}
+
+/* ================================ */
+/* TEXT SETTINGS */
+/* ================================ */
+p {
+  margin-top: 0.5cm;
+  margin-bottom: 0.5cm;
+  margin-right: 3cm;
+  margin-left: 3cm;
+}
+
+blockquote {
+  font-family: "Lucida Grande";
+  padding: 0.25cm;
+  background-color: #fceca4;
+  margin-left: 3cm;
+  margin-right: 3cm;
+  border-radius: 10px;
+}
+
+article {
+  font-family: "Lucida Grande";
+}
+
+section {
+  background-color: #B2B2B2;
+  padding: 0.25cm;
+}
+
+/* ================================ */
+/* IMAGE SETTINGS */
+/* ================================ */
+img {
+  max-width: 70%;
+  height:auto;
+  margin-left: 3cm;
+}
+
+/* ================================ */
+/* POSITIONING SETTINGS */
+/* ================================ */
+#wrap {
+  width: 36cm;
+  height: 10cm;
+}
+.left {
+  height: 10cm;
+  width: 20cm;
+  float: left;
+}
+.right{
+  height: 10cm;
+  width: 15cm;
+  float: right;
+}
+/*
+Source: https://www.youtube.com/watch?v=MUApnJ3y-Bs
+I adjusted some of the measurements of the divs manually
+*/
+
+
+/* ================================ */
+/* BUTTON SETTINGS */
+/* ================================ */
+
+
+/* ================================ */
+/* OVERALL PAGE */
+/* ================================ */
+
+
+/* ================================ */
+/* FOOTER */
+/* ================================ */
+
+
+
+
+
+/* Last edit: 7/9/2019 11:33 PM */
+/* Last validated error free: 7/9/2019 11:33 PM */
