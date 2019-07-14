@@ -1,0 +1,184 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+
+\title{Assignment 1}
+\author{Chenjia Lin}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Part 1}
+
+	\subsection{Hello, World}
+	In order to print "Hello, world," we would use the \verb|print()| function.
+
+	\begin{verbatim}
+		print("Hello, world!")
+	\end{verbatim}
+
+	To ask for user input, we would use the \verb|input()| function to retrieve a string from the user. We store the inputs as variables and then print it out along with other words.
+	
+	\begin{verbatim}
+		def greet():
+		  	name = input("What is your name? ")
+		  	age = input("How old are you? ")
+		  	color = input("What's your favorite color? ")
+		  	print("You are a", age, "year old named", name, "and likes the color", color)
+		greet()
+	\end{verbatim}
+	
+	\subsection{Converter}
+	We will first prompt a temperature from the user and use a for loop to display the result five times.
+	
+	\begin{verbatim}
+		def converter():
+		  	fahren = eval(input("What is the temperature in Fahrenheit?" ))
+		  	for x in range(0,5):
+		  	  	print 5/9*(fahren-32)
+		converter()
+	\end{verbatim}
+	
+	\subsection{Unit Converter}
+	My program will be able to convert $cm^3$ to liters.
+	
+	\begin{verbatim}
+		def vol_convert():
+		  	print("This program will convert cubic centimeters to liters.")
+		  	cm3 = eval(input("How many cubic centimeters do you want to convert?"))
+		  	print(cm3, "cubic centimeters is equal to", cm3/1000, "liters.")
+		vol_convert()
+	\end{verbatim}
+	
+	\subsection{Slope}
+	The program will have an accumulating variable, where the result from each input is added to the accumulating variable.
+	
+	\begin{verbatim}
+		def summing():
+		  	sum = 0
+		  	total = eval(input("How many numbers will you input? "))
+		  	for x in range(0, total):
+		  	  	f = eval(input("Enter number: "))
+		  	  	sum = f + sum
+		  	print(sum)
+		summing()
+	\end{verbatim}
+	
+	\subsection{Fibonacci Sequence}
+	I will first define the first two terms of the sequence, where \verb|a_m| represents $a_1$, \verb|a_n| represents $a_2$. Our goal is to compute $a_n$. We will ask for some input from the user. If $n$ is equal to 1 or 2, then we would simply output those values. For subsequent terms, we will use a \verb|for| loop, which simultaneously reassigns variables, where \verb|a_m| will be assigned the previous \verb|a_n| value and \verb|a_n| will be the sum of the original \verb|a_m| and \verb|a_n| values. Finally, we would print the value of the $n$th term, \verb|a_n|.
+	\begin{verbatim}	
+		def fibonacci():
+  			a_m = 1
+  			a_n = 1
+  			term = eval(input("Which term would you like to know?"))
+  			if term == 1:
+  			  	print(1)
+  			if term == 2:
+  			  	print(1)
+  			else:
+  			  	for x in range(0,term-2):
+  			  	  	a_n, a_m = a_n+a_m, a_n
+  			print(a_n)
+		fibonacci()
+	\end{verbatim}
+
+\pagebreak
+
+\section{Part 2}
+	\subsection{Basic Greedy Cash Register}
+	The Greedy Algorithm in this problem is based on the assumption that using coins of the greatest values to reach a certain amount reduces the number of coins used altogether. In my solution, I will use modular arithmetic and division to determine the minimum number of quarters, dimes, nickels, and pennies require to construct some change amount. 
+	\begin{verbatim}
+		def cashier_1():
+  			change = eval(input("How many cents of change do you want?"))
+  			q = change//25
+  			d = (change%25)//10
+  			n = ((change%25)%10)//5
+  			p = ((change%25)%10)%5
+  			print("Quarters: ", q)
+  			print("Dimes: ", d)
+  			print("Nickels: ", n)
+  			print("Pennies: ", p)
+  			print("Total Coins: ", p+n+d+q)
+		cashier_1()
+	\end{verbatim}
+	
+	\subsection{Challenge Solution}
+	In this problem, I started by prompting the number of coins for each coin type and the change that the user wants to create. A change I made in this new program is that I would keep modifying the value for the \verb|change| variable; one I get the maximum number of coins that can be used for a certain type, I would multiply that number by its value per coin and subtract that product from the change. If the number of coins calculated from doing integer division is less than the number of coins that the user has, then the number of coins used will be reassigned the actual number of coins. If by the end, there are not enough pennies, then the program will inform the user that there are not enough coins. 
+	\begin{verbatim}
+		def cashier_2():
+		  	change = eval(input("How many cents of change do you want?"))
+		  	quarters = eval(input("How many quarters do you have?"))
+		  	dimes = eval(input("How many dimes do you have?"))
+		  	nickels = eval(input("How many nickels do you have?"))
+		  	pennies = eval(input("How many pennies do you have?"))
+
+		  	q = change//25
+		  	if q <= quarters:
+			  	change = change - 25*q
+		  	else:
+			  	q = quarters
+			  	change = change - 25*q
+
+		  	d = change//10
+		  	if d <= dimes:
+			  	change = change - 10*d
+		  	else:
+			  	d = dimes
+			  	change = change - 10*d
+
+		  	n = change//5
+		  	if n <= nickels:
+			  	change = change - 5*n
+		  	else:
+			  	n = nickels
+			  	change = change - 5*n
+
+		  	p = change
+		  	if p <= pennies:
+			  	p = p
+			  	print("Quarters: ", q)
+			  	print("Dimes: ", d)
+			  	print("Nickels: ", n)
+			  	print("Pennies: ", p)
+			  	print("Total Coins: ", p+n+d+q)
+		  	else:
+			  	p = pennies
+			  	print("Oops! Not enough coins!")
+		cashier_2()
+	\end{verbatim}
+	
+	
+\section{Part 3}
+(see readme.txt)
+
+\section{Part 4}
+\begin{enumerate}
+	\item The Greedy Algorithm is a procedure whereby we attempt to use the least amount of coins of different denominations by ``maxing" out the number of coins for the greatest denomination and for subsequent lower denominations. We're basically making the most use out of the denominations with the greatest values.
+	\item Perhaps an alternate solution is to first start with pennies. For every five pennies, switch it with a nickel. Then, for every 2 nickels, switch it with a dime. Then, perhaps, for every two dimes and a nickel, switch it with a quarter. This seems to be the reverse of the process whereby we start with the largest denomination and continue downwards. 
+	\item One of the problems that the Greedy Algorithm is especially useful for is determining the continued fraction expansion of a fraction. The Greedy Algorithm is just a lot of division, where quotients and remainders are constantly used. This was best shown in my code for the challenge problem. Perhaps one can also consider it the Euclidean Algorithm. Here is an example:
+	\begin{framed}
+	\textbf{Problem} Express 16/9 as a continued fraction.\\
+	\textbf{Solution}\\
+	With the Euclidean Algorithm, we have:
+		\begin{align*}
+			N = q\cdot d + r \\
+			16 = 1\cdot 9 + 7\\
+			9 = 1\cdot 7 + 2\\
+			7 = 3\cdot 2 + 1\\
+			2 = 2\cdot 1 + 0
+	\end{align*}
+	To get our continued fraction, we simply take the quotients from each line and arrange them as such:
+	\begin{align*}
+	1+\frac{1}{1+\frac{1}{3+\frac{1}{2}}}
+	\end{align*}
+	\end{framed}
+	
+\end{enumerate}
+			
+
+
+\end{document}
