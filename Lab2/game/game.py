@@ -41,7 +41,7 @@ def play_game():
 		print("\t //        ///  //   /  ////|  //      //        //   /  //     //     //       //////    //   ")
 		print("\t /////  /////    ////  //   |  //      //////     ////   /////  /////  /////        |   ////// ")
 		print("")
-		print("===========================================================================================================")
+		print("\t ===========================================================================================================")
 		print("\t * It's midnight and the prison guards are drunk.")
 		print("\t * They start a fight tournament between the inmates.")
 		print("\t * The winner of the tournament gets a day out of prison.")
