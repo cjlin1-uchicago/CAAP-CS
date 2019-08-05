@@ -99,7 +99,34 @@ def draw(pallet, pixels):
 # After drawing the piece, ask the if they would like to draw a different piece until they quit the program.
 if __name__ == '__main__':
     # sample for loading art and calling draw
-    pallet_1, pixels_1 = load_art('art/banana.txt')
+    print("==== Menu ==== ")
+    print("[1] BANANA")
+    print("[2] MARIO")
+    print("[3] GHOST")
+    print("[4] ALIEN")
+    print("[5] MUSHROOM")
+    print("[6] LMAO")
+    print("[7] PICHU")
+    print("[8] AGUMON")
+    choice = eval(input("Type in picture number: "))
+    if choice == 1:
+        insert = 'art/banana.txt'
+    elif choice == 2:
+        insert = 'art/mario.txt'
+    elif choice == 3:
+        insert = 'art/ghost.txt'
+    elif choice == 4:
+        insert = 'art/alien.txt'
+    elif choice == 5:
+        insert = 'art/mushroom.txt'
+    elif choice == 6:
+        insert = 'art/lmao.txt'
+    elif choice == 7:
+        insert = 'art/pichu.txt'
+    else:
+        insert = 'art/agumon.txt'
+    
+    pallet_1, pixels_1 = load_art(insert)
     draw(pallet_1, pixels_1)
     # You need this to prevent the window from closing after drawing
     turtle.done()
