@@ -1,0 +1,17 @@
+Assignment 1
+CAAP CMSC 101, Summer 2019
+
+1. Hello world:						4/2 pts
+2. Converter:						6/6 pts
+3. Unit Conversion:					6/6 pts
+4. Slope:							10/10 pts
+5. Fibonacci Sequence:				6/6 pts
+6. Part 2 - Change:					30/20 pts
+7. Part 4:							10/10 pts
+
+Readme file							0/0 pts
+
+Total								72/60 pts
+
+Comments:
+	-MAKE SURE TO DOCUMENT ALL OF YOUR CODE!
