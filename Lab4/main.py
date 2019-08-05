@@ -83,6 +83,7 @@ def load_art(path):
 # This function takes a pallet and pixel list (matrix) to draw the picture
 # You are to write this function
 def draw(pallet, pixels):
+    turtle.resetscreen()
     global boxSize
     turtle.tracer(30)
     for row in range(len(pixels)):
@@ -93,40 +94,28 @@ def draw(pallet, pixels):
             myPen.color(use_color,use_color)
             box(boxSize)
             myPen.forward(boxSize)
-    turtle.done()
 
 # Should give the user a list of the possible drawing pieces you have and ask which one to draw
 # After drawing the piece, ask the if they would like to draw a different piece until they quit the program.
 if __name__ == '__main__':
     # sample for loading art and calling draw
     print("==== Menu ==== ")
-    print("[1] BANANA")
-    print("[2] MARIO")
-    print("[3] GHOST")
-    print("[4] ALIEN")
-    print("[5] MUSHROOM")
-    print("[6] LMAO")
-    print("[7] PICHU")
-    print("[8] AGUMON")
-    choice = eval(input("Type in picture number: "))
-    if choice == 1:
-        insert = 'art/banana.txt'
-    elif choice == 2:
-        insert = 'art/mario.txt'
-    elif choice == 3:
-        insert = 'art/ghost.txt'
-    elif choice == 4:
-        insert = 'art/alien.txt'
-    elif choice == 5:
-        insert = 'art/mushroom.txt'
-    elif choice == 6:
-        insert = 'art/lmao.txt'
-    elif choice == 7:
-        insert = 'art/pichu.txt'
-    else:
-        insert = 'art/agumon.txt'
-    
-    pallet_1, pixels_1 = load_art(insert)
-    draw(pallet_1, pixels_1)
-    # You need this to prevent the window from closing after drawing
+    print("[1] banana")
+    print("[2] mario")
+    print("[3] ghost")
+    print("[4] alien")
+    print("[5] mushroom")
+    print("[6] lmao")
+    print("[7] pichu")
+    print("[8] agumon\n")
+    print("Type :q to quit")
+    choice = ''
+    while choice != ':q':
+        choice = input("Type in the picture name: ")
+        insert = 'art/'+ choice + '.txt'
+        pallet_1, pixels_1 = load_art(insert)
+        draw(pallet_1, pixels_1)
     turtle.done()
+
+    # You need this to prevent the window from closing after drawing
+    #turtle.done()
